@@ -1,0 +1,19 @@
+github:
+  token: "ghp_PLACEHOLDER_TOKEN"
+  repo: "PrintMedia-Grafik-Druck/github-copilot-guardrails"
+
+policy:
+  mode: "ADVISORY"
+
+security:
+  enabled: true
+
+standards:
+  enabled: true
+
+license:
+  enabled: true
+
+ai:
+  enabled: false
+  model: "gpt-4"

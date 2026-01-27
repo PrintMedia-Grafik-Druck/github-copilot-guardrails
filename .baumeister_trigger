@@ -1,0 +1,6 @@
+{
+  "project": "topcoder_guardrails",
+  "prompt_file": "topcoder_prompt.txt",
+  "output_dir": "src/",
+  "timestamp": "2026-01-26T11:45:00Z"
+}

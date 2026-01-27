@@ -1,0 +1,111 @@
+TOPCODER CHALLENGE: AI-Powered Enterprise Guardrails for GitHub Copilot
+
+DEADLINE: January 28, 2026, 22:00 UTC
+PRIZE: $800 (1st), $400 (2nd)
+
+TECH STACK:
+- Python 3.9+, FastAPI, GitHub REST API, PyYAML, Requests
+
+REQUIREMENTS:
+
+1. SECURITY GUARDRAILS
+- Detect: hardcoded secrets, SQL injection, eval(), command injection
+- Map to OWASP Top 10 and CWE
+
+2. CODING STANDARDS
+- Enforce: naming conventions, logging, error handling
+- Config via YAML
+
+3. AI CODE REVIEW
+- Analyze PRs for security, performance, maintainability
+- Provide explanations and fix suggestions
+
+4. LICENSE COMPLIANCE
+- Detect restricted licenses (GPL)
+- Flag IP risks
+
+5. POLICY ENFORCEMENT
+- Three modes: ADVISORY, WARNING, BLOCKING
+- Configurable per repo
+
+6. GITHUB INTEGRATION
+- FastAPI webhook endpoint
+- Scan PR diffs
+- Post findings as PR comments
+- Support merge blocking
+
+7. AUDIT LOGS
+- JSON format with timestamp, findings, actions
+- Export for compliance
+
+DELIVERABLES (12 FILES):
+
+src/main.py - FastAPI server, webhook endpoint
+src/scanner.py - PR scanner, diff parser  
+src/security_rules.py - Security violation detection
+src/standards_checker.py - Coding standards enforcement
+src/license_checker.py - License compliance checker
+src/ai_reviewer.py - AI review (stub/optional)
+src/policy_engine.py - Policy mode enforcement
+src/github_api.py - GitHub API wrapper
+src/config_loader.py - Load .guardrails.yml
+src/audit_logger.py - Audit log writer
+requirements.txt - Dependencies
+README.md - Complete documentation
+
+CODE REQUIREMENTS:
+- Clean, production-ready Python
+- Type hints and docstrings
+- Error handling for all API calls
+- No TODO/FIXME comments
+- FastAPI runs: uvicorn main:app --host 0.0.0.0 --port 8000
+
+EXAMPLE CONFIG (.guardrails.yml):
+mode: WARNING
+rules:
+  security:
+    enabled: true
+  standards:
+    enabled: true
+  license:
+    enabled: true
+
+EXAMPLE OUTPUT (PR Comment):
+## GitHub Copilot Guardrails Report
+**Policy Mode:** WARNING
+### CRITICAL Issues (2)
+Line 45: Hardcoded API key detected
+Line 78: SQL Injection risk
+### Summary: 3 issues found
+
+DEPENDENCIES (requirements.txt):
+fastapi==0.109.0
+uvicorn==0.27.0
+requests==2.31.0
+PyYAML==6.0.1
+python-dotenv==1.0.0
+
+SUCCESS CRITERIA:
+✅ All 10 requirements implemented
+✅ FastAPI server runs without errors
+✅ Webhook processes PR events
+✅ Security rules detect secrets, SQL injection, eval
+✅ PR comments posted
+✅ Policy modes work
+✅ Audit logs written
+✅ Complete README
+✅ Clean, documented code
+
+JUDGING CRITERIA:
+- Functionality: 40%
+- Code Quality: 25%
+- Documentation: 20%
+- Innovation: 15%
+
+BAUMEISTER INSTRUCTIONS:
+- Generate complete, production-ready code
+- Apply Edge-Case Detection
+- Apply Variable-Name Checking
+- Apply Auto-Fix Loop
+- Ensure all imports correct
+- Optimize for TopCoder judging
