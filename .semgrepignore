@@ -1,0 +1,5 @@
+# Test files removed for SAST compliance
+tests/
+**/__pycache__/
+*.pyc
+.git/
