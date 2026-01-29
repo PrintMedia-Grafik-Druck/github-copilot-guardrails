@@ -138,3 +138,40 @@ to showcase production code quality. All security checks are
 implemented in src/ with proper validation and error handling.
 
 Original test suite available in git commit history for reference.
+
+---
+
+## 🚀 Deployed URL
+
+**Live Application:** https://github-copilot-guardrails.onrender.com
+
+**Webhook Endpoint:** https://github-copilot-guardrails.onrender.com/webhook
+
+**API Documentation:** https://github-copilot-guardrails.onrender.com/docs
+
+**Health Check:** https://github-copilot-guardrails.onrender.com/
+
+---
+
+## 📋 Deployment Details
+
+- **Platform:** Render.com
+- **Region:** Frankfurt (EU Central)
+- **Environment:** Python 3.13.4
+- **Framework:** FastAPI 0.128.0 + Uvicorn 0.40.0
+- **Auto-Deploy:** Enabled (on push to main)
+- **GitHub Integration:** Active
+
+### Configuration
+
+Environment variables are managed through Render dashboard:
+- `GITHUB_TOKEN` - GitHub API authentication
+- `OPENAI_API_KEY` - Optional, for AI-assisted code review
+
+### Endpoints
+
+- `GET /` - Health check
+- `POST /webhook` - GitHub webhook handler
+- `GET /docs` - Interactive API documentation (Swagger UI)
+- `GET /redoc` - Alternative API documentation
+
